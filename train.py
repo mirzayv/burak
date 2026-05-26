@@ -6,14 +6,41 @@
 # Masalan:
 # reverseSentence("we like coding!") return "ew ekil !gnidoc"
 
-def reverseSentence(text):
-    words = text.split(" ")
+# def reverseSentence(text):
+#    words = text.split(" ")
+#    result = []
+
+#    for word in words:
+#        result.append(word[::-1])
+
+#    return " ".join(result)
+
+
+# print(reverseSentence("we like coding!"))
+
+
+# TASK-M
+
+# Masalani izohi
+# Array ichidagi har bir raqam uchun
+# raqamning o'zi va uning kvadratidan
+# tashkil topgan object hosil qilib qaytarsin.
+
+# Masalan:
+# getSquareNumbers([1, 2, 3])
+# return [
+#   {"number": 1, "square": 1}, ...]
+
+def getSquareNumbers(arr):
     result = []
 
-    for word in words:
-        result.append(word[::-1])
+    for num in arr:
+        result.append({
+            "number": num,
+            "square": num * num
+        })
 
-    return " ".join(result)
+    return result
 
 
-print(reverseSentence("we like coding!"))
+print(getSquareNumbers([1, 2, 3]))
