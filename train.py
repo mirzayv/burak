@@ -31,16 +31,33 @@
 # return [
 #   {"number": 1, "square": 1}, ...]
 
-def getSquareNumbers(arr):
-    result = []
+# def getSquareNumbers(arr):
+#    result = []
 
-    for num in arr:
-        result.append({
-            "number": num,
-            "square": num * num
-        })
+#    for num in arr:
+#        result.append({
+#            "number": num,
+#            "square": num * num
+#        })
 
-    return result
+#   return result
 
 
-print(getSquareNumbers([1, 2, 3]))
+# print(getSquareNumbers([1, 2, 3]))
+
+
+# TASK-N
+
+# Masalani izohi
+# Stringni palindrom ekanligini aniqlab
+# true yoki false qaytarsin.
+
+# Masalan:
+# palindromCheck("dad")
+# return true
+
+def palindromCheck(text):
+    return text == text[::-1]
+
+
+print(palindromCheck("dad"))

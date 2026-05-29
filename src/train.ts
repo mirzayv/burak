@@ -12,7 +12,7 @@
 // return [
 //   { number: 1, square: 1 }, ...]
 
-function getSquareNumbers(arr: number[]) {
+/* function getSquareNumbers(arr: number[]) {
   const result = [];
 
   for (const num of arr) {
@@ -25,4 +25,20 @@ function getSquareNumbers(arr: number[]) {
   return result;
 }
 
-console.log(getSquareNumbers([1, 2, 3]));
+console.log(getSquareNumbers([1, 2, 3])); */
+
+// TASK-N
+
+// Masalani izohi
+// Stringni palindrom ekanligini aniqlab
+// true yoki false qaytarsin.
+
+// Masalan:
+// palindromCheck("dad")
+// return true
+
+function palindromCheck(text: string): boolean {
+  return text === text.split("").reverse().join("");
+}
+
+console.log(palindromCheck("dad"));
