@@ -37,8 +37,19 @@ console.log(getSquareNumbers([1, 2, 3])); */
 // palindromCheck("dad")
 // return true
 
-function palindromCheck(text: string): boolean {
+/* function palindromCheck(text: string): boolean {
   return text === text.split("").reverse().join("");
 }
 
-console.log(palindromCheck("dad"));
+console.log(palindromCheck("dad")); */
+
+/* Project Standards:
+   - Logging standards
+   - Naming standards:
+        function, method, variable => CAMEL
+        class => PASCAL
+        folder => KEBAB
+        css => SNAKE
+   - Error handling
+
+*/
