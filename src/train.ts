@@ -53,3 +53,10 @@ console.log(palindromCheck("dad")); */
    - Error handling
 
 */
+
+/*
+  Traditional Api
+  Rest Api
+  GraphQL Api
+  ...
+*/
