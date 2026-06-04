@@ -56,8 +56,50 @@
 # palindromCheck("dad")
 # return true
 
-def palindromCheck(text):
-    return text == text[::-1]
+# def palindromCheck(text):
+#   return text == text[::-1]
 
 
-print(palindromCheck("dad"))
+# print(palindromCheck("dad"))
+
+
+# TASK-O
+
+# Masalani izohi
+# Array ichidagi har xil qiymatlardan faqat sonlar yig'indisini hisoblab qaytarsin.
+
+# Masalan:
+# calculateSumOfNumbers([10, "10", {"son": 10}, True, 35]) return 45
+
+# def calculateSumOfNumbers(arr):
+#   total = 0
+
+#   for item in arr:
+#        if type(item) == int or type(item) == float:
+#            total += item
+
+#    return total
+
+
+# print(calculateSumOfNumbers([10, "10", {"son": 10}, True, 35]))
+
+
+# TASK-P
+
+# Masalani izohi
+# Objectni nested array sifatida convert qilib qaytarsin.
+
+# Masalan:
+# objectToArray({"a": 10, "b": 20})
+# return [["a", 10], ["b", 20]]
+
+def objectToArray(obj):
+    result = []
+
+    for key, value in obj.items():
+        result.append([key, value])
+
+    return result
+
+
+print(objectToArray({"a": 10, "b": 20}))

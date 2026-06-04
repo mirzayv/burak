@@ -60,3 +60,47 @@ console.log(palindromCheck("dad")); */
   GraphQL Api
   ...
 */
+
+// TASK-O
+
+// Masalani izohi
+// Array ichidagi har xil qiymatlardan faqat sonlar yig'indisini hisoblab qaytarsin.
+
+// Masalan:
+// calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
+/* 
+function calculateSumOfNumbers(arr: any[]): number {
+  let total = 0;
+
+  for (let item of arr) {
+    if (typeof item === "number") {
+      total += item;
+    }
+  }
+
+  return total;
+}
+
+console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
+ */
+
+// TASK-P
+
+// Masalani izohi
+// Objectni nested array sifatida convert qilib qaytarsin.
+
+// Masalan:
+// objectToArray({a: 10, b: 20})
+// return [["a", 10], ["b", 20]]
+
+function objectToArray(obj: any): any[] {
+  let result = [];
+
+  for (let key in obj) {
+    result.push([key, obj[key]]);
+  }
+
+  return result;
+}
+
+console.log(objectToArray({ a: 10, b: 20 }));
