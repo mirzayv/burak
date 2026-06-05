@@ -61,6 +61,11 @@ console.log(palindromCheck("dad")); */
   ...
 */
 
+/*
+  Traditional FD => SSR => EJS
+  Modern FD => SPA => REACT
+*/
+
 // TASK-O
 
 // Masalani izohi
@@ -93,7 +98,7 @@ console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
 // objectToArray({a: 10, b: 20})
 // return [["a", 10], ["b", 20]]
 
-function objectToArray(obj: any): any[] {
+/* function objectToArray(obj: any): any[] {
   let result = [];
 
   for (let key in obj) {
@@ -103,4 +108,4 @@ function objectToArray(obj: any): any[] {
   return result;
 }
 
-console.log(objectToArray({ a: 10, b: 20 }));
+console.log(objectToArray({ a: 10, b: 20 })); */

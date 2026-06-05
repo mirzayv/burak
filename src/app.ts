@@ -7,10 +7,10 @@ import { MORGAN_FORMAT } from "./libs/config";
 
 /** 1–ENTRANCE **/
 const app = express();
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(morgan(MORGAN_FORMAT));
+app.use(express.static(path.join(__dirname, "public"))); //MIDDLEWARE DP: public folderni ochadi
+app.use(express.urlencoded({ extended: true })); //MIDDLEWARE DP: Traditional API
+app.use(express.json()); //MIDDLEWARE DP: REST API
+app.use(morgan(MORGAN_FORMAT)); //MIDDLEWARE DP:
 
 /** 2–SESSIONS **/
 
@@ -19,8 +19,10 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 /** 4–ROUTERS **/
-app.use("/admin", routerAdmin); // EJS
-app.use("/", router); // REACT
+app.use("/admin", routerAdmin); // SSR
+app.use("/", router); // SPA
 // //Middleware Design Pattern
 
 export default app;
+
+//bssr
