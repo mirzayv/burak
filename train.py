@@ -93,13 +93,31 @@
 # objectToArray({"a": 10, "b": 20})
 # return [["a", 10], ["b", 20]]
 
-def objectToArray(obj):
-    result = []
+# def objectToArray(obj):
+#    result = []
 
-    for key, value in obj.items():
-        result.append([key, value])
+#   for key, value in obj.items():
+#       result.append([key, value])
 
-    return result
+#  return result
 
 
-print(objectToArray({"a": 10, "b": 20}))
+# print(objectToArray({"a": 10, "b": 20}))
+
+
+# TASK-Q
+
+# Masalani izohi
+# Objectda berilgan string propertysi borligini tekshirsin.
+
+# Masalan:
+# hasProperty({"name": "BMW"}, "name") return True
+# hasProperty({"name": "BMW"}, "color") return False
+
+def hasProperty(obj: dict, prop: str) -> bool:
+    return prop in obj
+
+
+print(hasProperty({"name": "BMW"}, "name"))   # True
+print(hasProperty({"name": "BMW"}, "color"))  # False
+print(hasProperty({}, "name"))                # False
