@@ -114,10 +114,27 @@
 # hasProperty({"name": "BMW"}, "name") return True
 # hasProperty({"name": "BMW"}, "color") return False
 
-def hasProperty(obj: dict, prop: str) -> bool:
-    return prop in obj
+# def hasProperty(obj: dict, prop: str) -> bool:
+#   return prop in obj
 
 
-print(hasProperty({"name": "BMW"}, "name"))   # True
-print(hasProperty({"name": "BMW"}, "color"))  # False
-print(hasProperty({}, "name"))                # False
+# print(hasProperty({"name": "BMW"}, "name"))   # True
+# print(hasProperty({"name": "BMW"}, "color"))  # False
+# print(hasProperty({}, "name"))                # False
+
+# TASK-R
+
+# Masalani izohi
+# "1 + 2" ko'rinishidagi stringni hisoblab number qaytarsin.
+
+# Masalan:
+# calculate("1 + 3") return 4
+
+def calculate(text: str) -> int:
+    return eval(text)
+
+
+print(calculate("1 + 3"))  # 4
+print(calculate("7 - 2"))  # 5
+print(calculate("4 * 5"))  # 20
+print(calculate("8 / 2"))  # 4
