@@ -65,6 +65,7 @@ class MemberService {
       result.memberPassword = "";
       return result;
     } catch (err) {
+      console.log("MONGO RAW ERROR:", err);
       throw new Errors(HttpCode.BAD_REQUEST, Message.CREATE_FAILED);
     }
   }
