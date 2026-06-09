@@ -109,3 +109,20 @@ console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
 }
 
 console.log(objectToArray({ a: 10, b: 20 })); */
+
+// TASK-Q
+
+// Masalani izohi
+// Objectda berilgan string propertysi borligini tekshirsin.
+
+// Masalan:
+// hasProperty({name: "BMW"}, "name") return true
+// hasProperty({name: "BMW"}, "color") return false
+
+function hasProperty(obj: Record<string, unknown>, prop: string): boolean {
+  return prop in obj;
+}
+
+console.log(hasProperty({ name: "BMW" }, "name")); // true
+console.log(hasProperty({ name: "BMW" }, "color")); // false
+console.log(hasProperty({}, "name")); // false
