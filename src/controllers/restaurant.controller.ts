@@ -123,3 +123,4 @@ restaurantController.checkAuthSession = async (
 };
 
 export default restaurantController;
+
