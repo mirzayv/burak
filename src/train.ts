@@ -132,3 +132,9 @@ console.log(hasProperty({}, "name")); // false
 request join
 self destroy
 */
+
+/* validation:
+front
+back
+db
+*/
