@@ -41,15 +41,14 @@ const productSchema = new Schema(
       default: ProductSize.NORMAL,
     },
 
-    ProductVolume: {
-      type: String,
+    productVolume: {
+      type: Number,
       enum: ProductVolume,
       default: ProductVolume.ONE,
     },
 
     productDesc: {
       type: String,
-      required: true,
     },
 
     productImages: {
