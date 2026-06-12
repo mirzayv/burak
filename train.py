@@ -148,11 +148,35 @@
 # Masalan:
 # missingNumber([3, 0, 1]) return 2
 
-def missingNumber(nums: list) -> int:
-    n = len(nums)
-    return n * (n + 1) // 2 - sum(nums)
+# def missingNumber(nums: list) -> int:
+#     n = len(nums)
+#     return n * (n + 1) // 2 - sum(nums)
 
 
-print(missingNumber([3, 0, 1]))  # 2
-print(missingNumber([0, 1]))     # 2
-print(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]))  # 8
+# print(missingNumber([3, 0, 1]))  # 2
+# print(missingNumber([0, 1]))     # 2
+# print(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]))  # 8
+
+
+# TASK-T
+
+# Masalani izohi
+# Ikkita arrayni qabul qilib, ularni birlashtirib
+# tartiblangan holda qaytarsin.
+
+# Masalan:
+# mergeSortedArrays([0, 3, 4], [4, 6]) return [0, 3, 4, 4, 6]
+
+def mergeSortedArrays(arr1: list, arr2: list) -> list:
+    merged = arr1 + arr2
+    # arr1 + arr2 — ikki arrayni birlashtirish
+    # [0, 3, 4] + [4, 6] = [0, 3, 4, 4, 6]
+
+    return sorted(merged)
+    # sorted() — o'sish tartibida tartiblaydi
+    # [0, 3, 4, 4, 6] ✅
+
+
+print(mergeSortedArrays([0, 3, 4], [4, 6]))   # [0, 3, 4, 4, 6]
+print(mergeSortedArrays([1, 5, 9], [2, 6]))   # [1, 2, 5, 6, 9]
+print(mergeSortedArrays([], [1, 2]))           # [1, 2]
