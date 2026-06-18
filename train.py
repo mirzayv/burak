@@ -174,9 +174,10 @@ def mergeSortedArrays(arr1: list, arr2: list) -> list:
 
     return sorted(merged)
     # sorted() — o'sish tartibida tartiblaydi
-    # [0, 3, 4, 4, 6] ✅
+    # [0, 3, 4, 4, 6] 
 
 
 print(mergeSortedArrays([0, 3, 4], [4, 6]))   # [0, 3, 4, 4, 6]
 print(mergeSortedArrays([1, 5, 9], [2, 6]))   # [1, 2, 5, 6, 9]
 print(mergeSortedArrays([], [1, 2]))           # [1, 2]
+    
