@@ -158,26 +158,51 @@
 # print(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]))  # 8
 
 
-# TASK-T
+# # TASK-T
+
+# # Masalani izohi
+# # Ikkita arrayni qabul qilib, ularni birlashtirib
+# # tartiblangan holda qaytarsin.
+
+# # Masalan:
+# # mergeSortedArrays([0, 3, 4], [4, 6]) return [0, 3, 4, 4, 6]
+
+# def mergeSortedArrays(arr1: list, arr2: list) -> list:
+#     merged = arr1 + arr2
+#     # arr1 + arr2 — ikki arrayni birlashtirish
+#     # [0, 3, 4] + [4, 6] = [0, 3, 4, 4, 6]
+
+#     return sorted(merged)
+#     # sorted() — o'sish tartibida tartiblaydi
+#     # [0, 3, 4, 4, 6]
+
+
+# print(mergeSortedArrays([0, 3, 4], [4, 6]))   # [0, 3, 4, 4, 6]
+# print(mergeSortedArrays([1, 5, 9], [2, 6]))   # [1, 2, 5, 6, 9]
+# print(mergeSortedArrays([], [1, 2]))           # [1, 2]
+
+
+# TASK V
 
 # Masalani izohi
-# Ikkita arrayni qabul qilib, ularni birlashtirib
-# tartiblangan holda qaytarsin.
+# Stringdagi har bir harf necha marta takrorlanganini object sifatida qaytarsin.
 
 # Masalan:
-# mergeSortedArrays([0, 3, 4], [4, 6]) return [0, 3, 4, 4, 6]
+# countChars("hello") return {"h": 1, "e": 1, "l": 2, "o": 1}
 
-def mergeSortedArrays(arr1: list, arr2: list) -> list:
-    merged = arr1 + arr2
-    # arr1 + arr2 — ikki arrayni birlashtirish
-    # [0, 3, 4] + [4, 6] = [0, 3, 4, 4, 6]
+# def countChars(text: str) -> dict:
+#     pass
 
-    return sorted(merged)
-    # sorted() — o'sish tartibida tartiblaydi
-    # [0, 3, 4, 4, 6] 
+def countChars(text: str) -> dict:
+    result = {}
+
+    for char in text:
+        if char in result:
+            result[char] += 1
+        else:
+            result[char] = 1
+
+    return result
 
 
-print(mergeSortedArrays([0, 3, 4], [4, 6]))   # [0, 3, 4, 4, 6]
-print(mergeSortedArrays([1, 5, 9], [2, 6]))   # [1, 2, 5, 6, 9]
-print(mergeSortedArrays([], [1, 2]))           # [1, 2]
-    
+print(countChars("hello"))
