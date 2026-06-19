@@ -44,6 +44,7 @@ restaurantController.processSignup = async (
 ) => {
   try {
     console.log("processSignup");
+    console.log("req.body", req.body);
     const file = req.file;
     if (!file)
       throw new Errors(HttpCode.BAD_REQUEST, Message.SOMETHING_WENT_WRONG);
@@ -134,6 +135,7 @@ restaurantController.updateChosenUser = async (req: Request, res: Response) => {
   }
 };
 
+//AUTHENTICATION = tamga
 restaurantController.checkAuthSession = async (
   req: AdminRequest,
   res: Response,
@@ -149,6 +151,7 @@ restaurantController.checkAuthSession = async (
   }
 };
 
+//AUTHORIZATION = tamga + huquq
 restaurantController.verifyRestaurant = (
   req: AdminRequest,
   res: Response,

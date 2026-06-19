@@ -22,13 +22,13 @@ routerAdmin.get("/check-me", restaurantController.checkAuthSession);
 /** Product */
 routerAdmin.get(
   "/product/all",
-  restaurantController.verifyRestaurant,
+  restaurantController.verifyRestaurant, //authorization middleware
   productController.getAllProducts,
 );
 routerAdmin.post(
   "/product/create",
-  restaurantController.verifyRestaurant,
-  makeUploader("products").array("productImages", 5),
+  restaurantController.verifyRestaurant, //authorization middleware (req + member)
+  makeUploader("products").array("productImages", 5), //uploader middleware (req + files)
   productController.createNewProduct,
 );
 routerAdmin.post(
