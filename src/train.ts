@@ -43,29 +43,6 @@ console.log(getSquareNumbers([1, 2, 3])); */
 
 console.log(palindromCheck("dad")); */
 
-/* Project Standards:
-   - Logging standards
-   - Naming standards:
-        function, method, variable => CAMEL
-        class => PASCAL
-        folder, file => KEBAB
-        css => SNAKE
-   - Error handling
-
-*/
-
-/*
-  Traditional Api
-  Rest Api
-  GraphQL Api
-  ...
-*/
-
-/*
-  Traditional FD => SSR => EJS
-  Modern FD => SPA => REACT
-*/
-
 // TASK-O
 
 // Masalani izohi
@@ -127,6 +104,29 @@ console.log(hasProperty({ name: "BMW" }, "name")); // true
 console.log(hasProperty({ name: "BMW" }, "color")); // false
 console.log(hasProperty({}, "name")); // false
  */
+
+/* Project Standards:
+   - Logging standards
+   - Naming standards:
+        function, method, variable => CAMEL
+        class => PASCAL
+        folder, file => KEBAB
+        css => SNAKE
+   - Error handling
+
+*/
+
+/*
+  Traditional FD => SSR => EJS
+  Modern FD => SPA => REACT
+*/
+
+/*
+  Traditional Api (form POST)
+  Rest Api
+  GraphQL Api
+  ...
+*/
 
 /* 
 request join
