@@ -45,6 +45,7 @@ restaurantController.processSignup = async (
   try {
     console.log("processSignup");
     console.log("req.body", req.body);
+    console.log("req.file:", req.file); // ← MANA BU YANGI QATOR
     const file = req.file;
     if (!file)
       throw new Errors(HttpCode.BAD_REQUEST, Message.SOMETHING_WENT_WRONG);

@@ -89,6 +89,7 @@ import session from "express-session";
 import ConnectMongoDB from "connect-mongodb-session";
 import { T } from "./libs/types/common";
 
+// TCP2
 const MongoDBStore = ConnectMongoDB(session);
 const store = new MongoDBStore({
   uri: String(process.env.MONGO_URL),
@@ -155,13 +156,13 @@ routerAdmin.get("/check-me", restaurantController.checkAuthSession);
 /** Product */
 routerAdmin.get(
   "/product/all",
-  restaurantController.verifyRestaurant,
+  restaurantController.verifyRestaurant, //authorization middleware
   productController.getAllProducts,
 );
 routerAdmin.post(
   "/product/create",
-  restaurantController.verifyRestaurant,
-  makeUploader("products").array("productImages", 5),
+  restaurantController.verifyRestaurant, //authorization middleware (req + member)
+  makeUploader("products").array("productImages", 5), //uploader middleware (req + files)
   productController.createNewProduct,
 );
 routerAdmin.post(
@@ -290,8 +291,8 @@ const productController: T = {};
 productController.getAllProducts = async (req: Request, res: Response) => {
   try {
     console.log("getAllProducts");
-    const data = await productService.getAllProducts();
-
+    const data = await productService.getAllProducts(); //CALL
+    console.log(data.length);
     res.render("products", { products: data });
   } catch (err) {
     console.log("Error, getAllProducts:", err);
@@ -396,6 +397,7 @@ restaurantController.processSignup = async (
 ) => {
   try {
     console.log("processSignup");
+    console.log("req.body", req.body);
     const file = req.file;
     if (!file)
       throw new Errors(HttpCode.BAD_REQUEST, Message.SOMETHING_WENT_WRONG);
@@ -426,6 +428,7 @@ restaurantController.processLogin = async (
 ) => {
   try {
     console.log("processLogin");
+    console.log("req.body:", req.body);
 
     const input: LoginInput = req.body;
     const result = await memberService.processLogin(input);
@@ -485,6 +488,7 @@ restaurantController.updateChosenUser = async (req: Request, res: Response) => {
   }
 };
 
+//AUTHENTICATION = tamga
 restaurantController.checkAuthSession = async (
   req: AdminRequest,
   res: Response,
@@ -500,6 +504,7 @@ restaurantController.checkAuthSession = async (
   }
 };
 
+//AUTHORIZATION = tamga + huquq
 restaurantController.verifyRestaurant = (
   req: AdminRequest,
   res: Response,
@@ -919,6 +924,8 @@ class ProductService {
   /** SPA */
 
   /** SSR */
+
+  // DEFINE
   public async getAllProducts(): Promise<Product[]> {
     const result = await this.productModel.find().exec();
     if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
@@ -1962,6 +1969,61 @@ console.log("Products frontend javascript file");
 ===== C:\Users\user\desktop\burak\src\public\js\signup.js =====
 console.log("Signup frontend javascript file");
 
+$(function () {
+  const fileTarget = $(".file-box .upload-hidden");
+  let filename;
+
+  fileTarget.on("change", function () {
+    if (window.FileReader) {
+      const uploadFile = $(this)[0].files[0];
+      const fileType = uploadFile["type"];
+      const validImageType = ["image/jpg", "image/jpeg", "image/png"];
+      if (!validImageType.includes(fileType)) {
+        alert("Please insert only jpeg, jpg and png!");
+      } else {
+        if (uploadFile) {
+          console.log(URL.createObjectURL(uploadFile));
+          $(".upload-img-frame")
+            .attr("src", URL.createObjectURL(uploadFile))
+            .addClass("success");
+        }
+        filename = $(this)[0].files[0].name;
+      }
+      $(this).siblings(".upload-name").val(filename);
+    }
+  });
+});
+
+function validateSignupForm() {
+  const memberNick = $(".member-nick").val();
+  const memberPhone = $(".member-phone").val();
+  const memberPassword = $(".member-password").val();
+  const confirmPassword = $(".confirm-password").val();
+
+  if (
+    memberNick === "" ||
+    memberPhone === "" ||
+    memberPassword === "" ||
+    confirmPassword === ""
+  ) {
+    alert("Please insert all required inputs!");
+    return false;
+  }
+
+  if (memberPassword !== confirmPassword) {
+    alert("Password differs, please check!");
+    return false;
+  }
+
+  const memberImage = $(".member-image").get(0).files[0].name
+    ? $(".member-image").get(0).files[0].name
+    : null;
+  if (!memberImage) {
+    alert("Please insert restaurant image!");
+    return false;
+  }
+}
+
 ===== C:\Users\user\desktop\burak\src\public\js\users.js =====
 console.log("Users frontend javascript file");
 
@@ -2508,7 +2570,12 @@ export default mongoose.model("Product", productSchema);
 
 <body>
   <div class="signup-container">
-    <form action="/admin/signup" method="POST" enctype="multipart/form-data">
+    <form
+      onsubmit="return validateSignupForm();"
+      action="/admin/signup"
+      method="POST"
+      enctype="multipart/form-data"
+    >
       <div class="signup-frame" style="width: 650px">
         <div class="signup-top">
           <span>Signup</span>
@@ -2731,6 +2798,7 @@ export default mongoose.model("Product", productSchema);
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
