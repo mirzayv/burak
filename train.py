@@ -193,16 +193,34 @@
 # def countChars(text: str) -> dict:
 #     pass
 
-def countChars(text: str) -> dict:
-    result = {}
+# def countChars(text: str) -> dict:
+#    result = {}
+#        if char in result:
+#            result[char] += 1
+#        else:
+#            result[char] = 1
 
-    for char in text:
-        if char in result:
-            result[char] += 1
-        else:
-            result[char] = 1
+#    return result
+
+
+# print(countChars("hello"))
+
+
+# TASK W
+
+# Masalani izohi
+# Arrayni berilgan uzunlikda bo'laklarga ajratib qaytarsin.
+
+# Masalan:
+# chunkArray([1, 2, 3, 4, 5], 2) return [[1, 2], [3, 4], [5]]
+
+def chunkArray(arr, size):
+    result = []
+
+    for i in range(0, len(arr), size):
+        result.append(arr[i:i + size])
 
     return result
 
 
-print(countChars("hello"))
+print(chunkArray([1, 2, 3, 4, 5], 2))
