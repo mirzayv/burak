@@ -214,13 +214,40 @@
 # Masalan:
 # chunkArray([1, 2, 3, 4, 5], 2) return [[1, 2], [3, 4], [5]]
 
-def chunkArray(arr, size):
-    result = []
+# def chunkArray(arr, size):
+# for i in range(0, len(arr), size):
+#      result.append(arr[i:i + size])
 
-    for i in range(0, len(arr), size):
-        result.append(arr[i:i + size])
-
-    return result
+# return result
 
 
-print(chunkArray([1, 2, 3, 4, 5], 2))
+# print(chunkArray([1, 2, 3, 4, 5], 2))
+
+# TASK X
+
+# Masalani izohi
+# Object tarkibida (nested bo'lsa ham) berilgan kalit
+# necha marta takrorlanganini sanang.
+
+# Masalan:
+# countOccurrences({"model": "A", "s": {"model": "B"}}, "model") return 2
+
+def countOccurrences(obj: dict, key: str) -> int:
+    count = 0
+
+    for k, v in obj.items():
+        if k == key:
+            count += 1
+
+        if isinstance(v, dict):
+            count += countOccurrences(v, key)
+
+    return count
+
+
+print(
+    countOccurrences(
+        {"model": "A", "s": {"model": "B"}},
+        "model"
+    )
+)

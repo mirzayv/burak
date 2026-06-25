@@ -50,6 +50,234 @@ SESSION_SECRET=ashdjahsdjhasjdh454as6d
   }
 }
 
+===== C:\Users\user\desktop\burak\train.py =====
+# TASK-L
+
+# Masalani izohi
+# So'zlarni ketma-ketligini buzmasdan har bir so'zni alohida teskarisiga o'girib beradigan function tuzing.
+
+# Masalan:
+# reverseSentence("we like coding!") return "ew ekil !gnidoc"
+
+# def reverseSentence(text):
+#    words = text.split(" ")
+#    result = []
+
+#    for word in words:
+#        result.append(word[::-1])
+
+#    return " ".join(result)
+
+
+# print(reverseSentence("we like coding!"))
+
+
+# TASK-M
+
+# Masalani izohi
+# Array ichidagi har bir raqam uchun
+# raqamning o'zi va uning kvadratidan
+# tashkil topgan object hosil qilib qaytarsin.
+
+# Masalan:
+# getSquareNumbers([1, 2, 3])
+# return [
+#   {"number": 1, "square": 1}, ...]
+
+# def getSquareNumbers(arr):
+#    result = []
+
+#    for num in arr:
+#        result.append({
+#            "number": num,
+#            "square": num * num
+#        })
+
+#   return result
+
+
+# print(getSquareNumbers([1, 2, 3]))
+
+
+# TASK-N
+
+# Masalani izohi
+# Stringni palindrom ekanligini aniqlab
+# true yoki false qaytarsin.
+
+# Masalan:
+# palindromCheck("dad")
+# return true
+
+# def palindromCheck(text):
+#   return text == text[::-1]
+
+
+# print(palindromCheck("dad"))
+
+
+# TASK-O
+
+# Masalani izohi
+# Array ichidagi har xil qiymatlardan faqat sonlar yig'indisini hisoblab qaytarsin.
+
+# Masalan:
+# calculateSumOfNumbers([10, "10", {"son": 10}, True, 35]) return 45
+
+# def calculateSumOfNumbers(arr):
+#   total = 0
+
+#   for item in arr:
+#        if type(item) == int or type(item) == float:
+#            total += item
+
+#    return total
+
+
+# print(calculateSumOfNumbers([10, "10", {"son": 10}, True, 35]))
+
+
+# TASK-P
+
+# Masalani izohi
+# Objectni nested array sifatida convert qilib qaytarsin.
+
+# Masalan:
+# objectToArray({"a": 10, "b": 20})
+# return [["a", 10], ["b", 20]]
+
+# def objectToArray(obj):
+#    result = []
+
+#   for key, value in obj.items():
+#       result.append([key, value])
+
+#  return result
+
+
+# print(objectToArray({"a": 10, "b": 20}))
+
+
+# TASK-Q
+
+# Masalani izohi
+# Objectda berilgan string propertysi borligini tekshirsin.
+
+# Masalan:
+# hasProperty({"name": "BMW"}, "name") return True
+# hasProperty({"name": "BMW"}, "color") return False
+
+# def hasProperty(obj: dict, prop: str) -> bool:
+#   return prop in obj
+
+
+# print(hasProperty({"name": "BMW"}, "name"))   # True
+# print(hasProperty({"name": "BMW"}, "color"))  # False
+# print(hasProperty({}, "name"))                # False
+
+# TASK-R
+
+# Masalani izohi
+# "1 + 2" ko'rinishidagi stringni hisoblab number qaytarsin.
+
+# Masalan:
+# calculate("1 + 3") return 4
+
+# def calculate(text: str) -> int:
+#   return eval(text)
+
+
+# print(calculate("1 + 3"))  # 4
+# print(calculate("7 - 2"))  # 5
+# print(calculate("4 * 5"))  # 20
+# print(calculate("8 / 2"))  # 4
+
+
+# TASK-S
+
+# Masalani izohi
+# Array ichidagi tushib qolgan sonni topib qaytarsin.
+
+# Masalan:
+# missingNumber([3, 0, 1]) return 2
+
+# def missingNumber(nums: list) -> int:
+#     n = len(nums)
+#     return n * (n + 1) // 2 - sum(nums)
+
+
+# print(missingNumber([3, 0, 1]))  # 2
+# print(missingNumber([0, 1]))     # 2
+# print(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]))  # 8
+
+
+# # TASK-T
+
+# # Masalani izohi
+# # Ikkita arrayni qabul qilib, ularni birlashtirib
+# # tartiblangan holda qaytarsin.
+
+# # Masalan:
+# # mergeSortedArrays([0, 3, 4], [4, 6]) return [0, 3, 4, 4, 6]
+
+# def mergeSortedArrays(arr1: list, arr2: list) -> list:
+#     merged = arr1 + arr2
+#     # arr1 + arr2 вЂ” ikki arrayni birlashtirish
+#     # [0, 3, 4] + [4, 6] = [0, 3, 4, 4, 6]
+
+#     return sorted(merged)
+#     # sorted() вЂ” o'sish tartibida tartiblaydi
+#     # [0, 3, 4, 4, 6]
+
+
+# print(mergeSortedArrays([0, 3, 4], [4, 6]))   # [0, 3, 4, 4, 6]
+# print(mergeSortedArrays([1, 5, 9], [2, 6]))   # [1, 2, 5, 6, 9]
+# print(mergeSortedArrays([], [1, 2]))           # [1, 2]
+
+
+# TASK V
+
+# Masalani izohi
+# Stringdagi har bir harf necha marta takrorlanganini object sifatida qaytarsin.
+
+# Masalan:
+# countChars("hello") return {"h": 1, "e": 1, "l": 2, "o": 1}
+
+# def countChars(text: str) -> dict:
+#     pass
+
+# def countChars(text: str) -> dict:
+#    result = {}
+#        if char in result:
+#            result[char] += 1
+#        else:
+#            result[char] = 1
+
+#    return result
+
+
+# print(countChars("hello"))
+
+
+# TASK W
+
+# Masalani izohi
+# Arrayni berilgan uzunlikda bo'laklarga ajratib qaytarsin.
+
+# Masalan:
+# chunkArray([1, 2, 3, 4, 5], 2) return [[1, 2], [3, 4], [5]]
+
+def chunkArray(arr, size):
+    result = []
+
+    for i in range(0, len(arr), size):
+        result.append(arr[i:i + size])
+
+    return result
+
+
+print(chunkArray([1, 2, 3, 4, 5], 2))
+
 ===== C:\Users\user\desktop\burak\tsconfig.json =====
 {
   "compilerOptions": {
@@ -233,6 +461,148 @@ mongoose
   })
   .catch((err) => console.log("ERROR on connection MongoDB", err));
 
+===== C:\Users\user\desktop\burak\src\train.ts =====
+// console.log("Hello World");
+
+// TASK-M
+
+// Masalani izohi
+// Array ichidagi har bir raqam uchun
+// raqamning o'zi va uning kvadratidan
+// tashkil topgan object hosil qilib qaytarsin.
+
+// Masalan:
+// getSquareNumbers([1, 2, 3])
+// return [
+//   { number: 1, square: 1 }, ...]
+
+/* function getSquareNumbers(arr: number[]) {
+  const result = [];
+
+  for (const num of arr) {
+    result.push({
+      number: num,
+      square: num * num,
+    });
+  }
+
+  return result;
+}
+
+console.log(getSquareNumbers([1, 2, 3])); */
+
+// TASK-N
+
+// Masalani izohi
+// Stringni palindrom ekanligini aniqlab
+// true yoki false qaytarsin.
+
+// Masalan:
+// palindromCheck("dad")
+// return true
+
+/* function palindromCheck(text: string): boolean {
+  return text === text.split("").reverse().join("");
+}
+
+console.log(palindromCheck("dad")); */
+
+// TASK-O
+
+// Masalani izohi
+// Array ichidagi har xil qiymatlardan faqat sonlar yig'indisini hisoblab qaytarsin.
+
+// Masalan:
+// calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
+/* 
+function calculateSumOfNumbers(arr: any[]): number {
+  let total = 0;
+
+  for (let item of arr) {
+    if (typeof item === "number") {
+      total += item;
+    }
+  }
+
+  return total;
+}
+
+console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
+ */
+
+// TASK-P
+
+// Masalani izohi
+// Objectni nested array sifatida convert qilib qaytarsin.
+
+// Masalan:
+// objectToArray({a: 10, b: 20})
+// return [["a", 10], ["b", 20]]
+
+/* function objectToArray(obj: any): any[] {
+  let result = [];
+
+  for (let key in obj) {
+    result.push([key, obj[key]]);
+  }
+
+  return result;
+}
+
+console.log(objectToArray({ a: 10, b: 20 })); */
+
+// TASK-Q
+
+// Masalani izohi
+// Objectda berilgan string propertysi borligini tekshirsin.
+
+// Masalan:
+// hasProperty({name: "BMW"}, "name") return true
+// hasProperty({name: "BMW"}, "color") return false
+
+/* function hasProperty(obj: Record<string, unknown>, prop: string): boolean {
+  return prop in obj;
+}
+
+console.log(hasProperty({ name: "BMW" }, "name")); // true
+console.log(hasProperty({ name: "BMW" }, "color")); // false
+console.log(hasProperty({}, "name")); // false
+ */
+
+/* Project Standards:
+   - Logging standards
+   - Naming standards:
+        function, method, variable => CAMEL
+        class => PASCAL
+        folder, file => KEBAB
+        css => SNAKE
+   - Error handling
+
+*/
+
+/*
+  Traditional FD => SSR => EJS
+  Modern FD => SPA => REACT
+*/
+
+/*
+  Traditional Api (form POST)
+  Rest Api
+  GraphQL Api
+  ...
+*/
+
+/* 
+request join
+self destroy
+*/
+
+/* validation:
+front
+back
+db
+*/
+
 ===== C:\Users\user\desktop\burak\src\controllers\member.controller.ts =====
 import { Request, Response } from "express";
 import { T } from "../libs/types/common";
@@ -292,6 +662,8 @@ productController.getAllProducts = async (req: Request, res: Response) => {
   try {
     console.log("getAllProducts");
     const data = await productService.getAllProducts(); //CALL
+    console.log("products:", data);
+
     console.log(data.length);
     res.render("products", { products: data });
   } catch (err) {
@@ -307,6 +679,7 @@ productController.createNewProduct = async (
 ) => {
   try {
     console.log("createNewProduct");
+    console.log("req.body:", req.body);
     console.log("req.files", req.files);
     if (!req?.files?.length)
       throw new Errors(HttpCode.INTERNAL_SERVER_ERROR, Message.CREATE_FAILED);
@@ -398,6 +771,7 @@ restaurantController.processSignup = async (
   try {
     console.log("processSignup");
     console.log("req.body", req.body);
+    console.log("req.file:", req.file); // в†ђ MANA BU YANGI QATOR
     const file = req.file;
     if (!file)
       throw new Errors(HttpCode.BAD_REQUEST, Message.SOMETHING_WENT_WRONG);
@@ -553,6 +927,7 @@ export enum Message {
 
   USED_NICK_PHONE = "You are inserting already used nick or phone!",
   NO_MEMBER_NICK = "No member with that member nick!",
+  BLOCKED_USER = "You have been blocked, contact restaurant!",
   WRONG_PASSWORD = "Wrong password, please try again!",
   NOT_AUTHENTICATED = "You are not authenticated, Please login first!",
 }
@@ -787,7 +1162,7 @@ import {
   MemberUpdateInput,
 } from "../libs/types/member";
 import Errors, { HttpCode, Message } from "../libs/Errors";
-import { MemberType } from "../libs/enums/member.enum";
+import { MemberStatus, MemberType } from "../libs/enums/member.enum";
 import * as bcrypt from "bcryptjs";
 import { publicDecrypt } from "crypto";
 import { shapeIntoMongooseObjectId } from "../libs/config";
@@ -818,20 +1193,27 @@ class MemberService {
   public async login(input: LoginInput): Promise<Member> {
     const member = await this.memberModel
       .findOne(
-        { memberNick: input.memberNick },
-        { memberNick: 1, memberPassword: 1 },
+        {
+          memberNick: input.memberNick,
+          memberStatus: { $ne: MemberStatus.DELETE },
+        },
+        { memberNick: 1, memberPassword: 1, memberStatus: 1 },
       )
       .exec();
-
     if (!member) throw new Errors(HttpCode.NOT_FOUND, Message.NO_MEMBER_NICK);
+    else if (member.memberStatus === MemberStatus.BLOCK) {
+      throw new Errors(HttpCode.FORBIDDEN, Message.BLOCKED_USER);
+    }
+
+    console.log("member:", member);
 
     const isMatch = await bcrypt.compare(
       input.memberPassword,
       member.memberPassword,
     );
-
-    if (!isMatch)
+    if (!isMatch) {
       throw new Errors(HttpCode.UNAUTHORIZED, Message.WRONG_PASSWORD);
+    }
 
     return await this.memberModel.findById(member._id).lean().exec();
   }
@@ -1189,12 +1571,12 @@ body {
 ===== C:\Users\user\desktop\burak\src\public\css\products.css =====
 .products-container {
   position: relative;
-  width: auto;
-  height: auto;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: auto;
+  height: auto;
+  min-height: 100%;
   background: linear-gradient(-45deg, #110303bf, #e37813, #011c1aba, #968383);
 }
 
@@ -1213,281 +1595,278 @@ body {
 
 .products-container .navigation-menu {
   position: absolute;
-  z-index: 10000;
   top: 1%;
-  color: #efefee;
-  font-size: 40px;
+  z-index: 10000;
   font-family: monospace;
+  font-size: 40px;
+  color: #efefee;
 }
 
 .products-container .restaurant-menu-frame {
   position: relative;
-  padding-bottom: 80px;
-  width: 100%;
-  height: auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 80px;
 }
 
 .products-container .restaurant-menu-frame .board {
   position: relative;
-  margin-top: 100px;
-  width: 1320px;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 1320px;
+  height: auto;
+  margin-top: 100px;
 }
 
 .products-container .board .dishes-table {
   position: relative;
-  width: 100%;
-  height: auto;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
 }
 
 .products-container .board .dish-container {
   position: relative;
-  margin-top: 20px;
-  width: 100%;
-  height: auto;
-
-  /* TODO: UNCOMMENT */
-  /*display: none;*/
+  display: none;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
 }
 
 .products-container .new-dish-txt {
   font-family: "Source Serif Pro";
-  font-style: normal;
-  font-weight: 400;
   font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 25px;
   color: #ffffff;
 }
 
 .products-container .long-input {
   position: relative;
-  margin-top: 25px;
-  width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
 }
 
 .products-container .long-input label {
   font-family: "Source Serif Pro";
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 25px;
   color: #ffffff;
 }
 
 .products-container .long-input input {
   position: relative;
-  margin-top: 10px;
-  padding-left: 20px;
   width: 100%;
   height: 54px;
+  padding-left: 20px;
   border: none;
-  background: #f7f7f7;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  margin-top: 10px;
   font-family: "GT Walsheim Pro";
-  font-style: normal;
-  font-weight: 400;
   font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 26px;
   color: #4f547b;
+  background: #f7f7f7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .products-container .long-input textarea {
   position: relative;
-  margin-top: 10px;
-  padding: 20px;
   width: 100%;
   height: 200px;
+  padding: 20px;
   border: none;
-  background: #f7f7f7;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  margin-top: 10px;
   font-family: "GT Walsheim Pro";
-  font-style: normal;
-  font-weight: 400;
   font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 26px;
   color: #4f547b;
+  background: #f7f7f7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .products-container .half-input select {
   position: relative;
-  margin-top: 10px;
-  padding: 0px 20px;
+  display: flex;
   width: 100%;
   height: 55px;
-  display: flex;
+  padding: 0px 20px;
   border: none;
-  background: #f7f7f7;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  margin-top: 10px;
   font-family: "GT Walsheim Pro";
-  font-style: normal;
-  font-weight: 400;
   font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 26px;
   color: #4f547b;
+  background: #f7f7f7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .products-container select:focus {
-  min-width: 100%;
   width: auto;
+  min-width: 100%;
 }
 
 .products-container .long-input select {
   position: relative;
-  margin-top: 10px;
-  padding: 0px 20px;
+  display: flex;
   width: 100%;
   height: 55px;
-  display: flex;
+  padding: 0px 20px;
   border: none;
-  background: #f7f7f7;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  margin-top: 10px;
   font-family: "GT Walsheim Pro";
-  font-style: normal;
-  font-weight: 400;
   font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 26px;
   color: #4f547b;
+  background: #f7f7f7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .products-container .dish-container .half-input-frame {
   position: relative;
-  margin-top: 25px;
-  width: 100%;
-  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
 }
 
 .products-container .half-input-frame .half-input {
   position: relative;
-  width: 49%;
-  height: auto;
   display: flex;
   flex-direction: column;
+  width: 49%;
+  height: auto;
 }
 
 .products-container .half-input label {
   font-family: "Source Serif Pro";
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 25px;
   color: #ffffff;
 }
 
 .products-container .half-input input {
   position: relative;
-  margin-top: 10px;
-  padding-left: 20px;
   width: 100%;
   height: 54px;
+  padding-left: 20px;
   border: none;
+  border-radius: 5px;
+  margin-top: 10px;
   background: #f7f7f7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
 }
 
 .products-container .media-frame {
   position: relative;
-  margin-top: 10px;
-  width: 100%;
-  height: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  height: 250px;
+  margin-top: 10px;
 }
 
 .products-container .media-frame .upload-img-box {
   position: relative;
-  width: 19%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 19%;
+  height: 100%;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .products-container .upload-img-box img {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
   border-radius: 10px;
 }
 
 .products-container .img-frame {
   position: relative;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .products-container .img-frame label {
   margin-top: 30px;
   font-family: "Source Serif Pro";
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 25px;
   color: #ffffff;
 }
 
 .products-container #file {
-  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   border: none;
   border-radius: 10px;
   background: grey;
-  position: absolute;
-  left: 0px;
-  width: 100%;
-  top: 0px;
-  height: 100%;
+  opacity: 0;
   cursor: pointer;
 }
 
 .products-container .operation-buttons {
-  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 
 .products-container .spec-select {
   position: relative;
-  padding: 0px 7px;
   height: 27px;
-  background: #ffffff;
+  padding: 0px 7px;
   border: 1px solid #dddddd;
   border-radius: 8px;
   font-family: "GT Walsheim Pro";
-  font-style: normal;
-  font-weight: 400;
   font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 26px;
   color: #4f547b;
+  background: #ffffff;
 }
 
 .products-container table td,
@@ -1504,44 +1883,44 @@ table th {
 }
 
 .products-container .switch input {
-  opacity: 0;
   width: 0;
   height: 0;
+  opacity: 0;
 }
 
 .products-container .slider {
   position: absolute;
-  cursor: pointer;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .products-container .slider:before {
-  position: absolute;
   content: "";
-  height: 14px;
-  width: 14px;
-  left: 6px;
+  position: absolute;
   bottom: 3.5px;
+  left: 6px;
+  width: 14px;
+  height: 14px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.products-container input:checked + .slider {
+.products-container input:checked+.slider {
   background-color: #2196f3;
 }
 
-.products-container input:focus + .slider {
+.products-container input:focus+.slider {
   box-shadow: 0 0 1px #2196f3;
 }
 
-.products-container input:checked + .slider:before {
+.products-container input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -1869,11 +2248,11 @@ function fitElementToParent(el, padding) {
   function resize() {
     if (timeout) clearTimeout(timeout);
     anime.set(el, { scale: 1 });
-    let pad = padding || 0;
-    let parentEl = el.parentNode;
-    let elOffsetWidth = el.offsetWidth - pad;
-    let parentOffsetWidth = parentEl.offsetWidth;
-    let ratio = parentOffsetWidth / elOffsetWidth;
+    ((pad = padding || 0),
+      (parentEl = el.parentNode),
+      (elOffsetWidth = el.offsetWidth - pad),
+      (parentOffsetWidth = parentEl.offsetWidth),
+      (ratio = parentOffsetWidth / elOffsetWidth));
     timeout = setTimeout(anime.set(el, { scale: ratio }), 10);
   }
 
@@ -1882,10 +2261,10 @@ function fitElementToParent(el, padding) {
 }
 
 (function () {
-  const sphereEl = document.querySelector(".sphere-animation");
-  const spherePathEls = sphereEl.querySelectorAll(".sphere path");
-  const pathLength = spherePathEls.length;
-  const animations = [];
+  const sphereEl = document.querySelector(".sphere-animation"),
+    spherePathEls = sphereEl.querySelectorAll(".sphere path"),
+    pathLength = spherePathEls.length,
+    animations = [];
 
   fitElementToParent(sphereEl);
 
@@ -1966,6 +2345,94 @@ console.log("Basic frontend javascript file");
 ===== C:\Users\user\desktop\burak\src\public\js\products.js =====
 console.log("Products frontend javascript file");
 
+$(function () {
+  $(".product-collection").on("change", () => {
+    const selectedValue = $(".product-collection").val();
+
+    if (selectedValue === "DRINK") {
+      $("#product-collection").hide();
+      $("#product-volume").show();
+    } else {
+      $("#product-volume").hide();
+      $("#product-collection").show();
+    }
+  });
+
+  $("#process-btn").on("click", () => {
+    $(".dish-container").slideToggle(500);
+    $("#process-btn").css("display", "none");
+  });
+});
+
+$("#cancel-btn").on("click", () => {
+  $(".dish-container").slideToggle(100);
+  $("#process-btn").css("display", "flex");
+});
+
+$(".new-product-status").on("change", async function (e) {
+  const id = e.target.id;
+  const productStatus = $(`#${id}.new-product-status`).val();
+
+  try {
+    const response = await axios.post(`/admin/product/${id}`, {
+      productStatus: productStatus,
+    });
+    console.log("response:", response);
+    const result = response.data;
+
+    if (result.data) {
+      $(".new-product-status").blur();
+    } else alert("Product update failed!");
+  } catch (err) {
+    console.log(err);
+    alert("Product update failed!");
+  }
+});
+
+function validateForm() {
+  const productName = $(".product-name").val();
+  const productPrice = $(".product-price").val();
+  const productLeftCount = $(".product-left-count").val();
+  const productCollection = $(".product-collection").val();
+  const productDesc = $(".product-desc").val();
+  const productStatus = $(".product-status").val();
+
+  if (
+    productName === "" ||
+    productPrice === "" ||
+    productLeftCount === "" ||
+    productCollection === "" ||
+    productDesc === "" ||
+    productStatus === ""
+  ) {
+    alert("Please insert all details!");
+    return false;
+  } else return true;
+}
+
+function previewFileHandler(input, order) {
+  const imgClassName = input.className;
+  console.log("input:", input);
+
+  const file = $(`.${imgClassName}`).get(0).files[0];
+  const fileType = file["type"];
+  const validImageType = ["image/jpg", "image/jpeg", "image/png"];
+
+  if (!validImageType.includes(fileType)) {
+    alert("Please insert only jpeg, jpg and png!");
+  } else {
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function () {
+        $(`#image-section-${order}`).attr("src", reader.result);
+      };
+
+      reader.readAsDataURL(file);
+    }
+  }
+}
+
 ===== C:\Users\user\desktop\burak\src\public\js\signup.js =====
 console.log("Signup frontend javascript file");
 
@@ -1975,9 +2442,9 @@ $(function () {
 
   fileTarget.on("change", function () {
     if (window.FileReader) {
-      const uploadFile = $(this)[0].files[0];
-      const fileType = uploadFile["type"];
-      const validImageType = ["image/jpg", "image/jpeg", "image/png"];
+      const uploadFile = $(this)[0].files[0],
+        fileType = uploadFile["type"],
+        validImageType = ["image/jpg", "image/jpeg", "image/png"];
       if (!validImageType.includes(fileType)) {
         alert("Please insert only jpeg, jpg and png!");
       } else {
@@ -1995,10 +2462,10 @@ $(function () {
 });
 
 function validateSignupForm() {
-  const memberNick = $(".member-nick").val();
-  const memberPhone = $(".member-phone").val();
-  const memberPassword = $(".member-password").val();
-  const confirmPassword = $(".confirm-password").val();
+  const memberNick = $(".member-nick").val(),
+    memberPhone = $(".member-phone").val(),
+    memberPassword = $(".member-password").val(),
+    confirmPassword = $(".confirm-password").val();
 
   if (
     memberNick === "" ||
@@ -2026,6 +2493,32 @@ function validateSignupForm() {
 
 ===== C:\Users\user\desktop\burak\src\public\js\users.js =====
 console.log("Users frontend javascript file");
+
+$(function () {
+  $(".member-status").on("change", function (e) {
+    const id = e.target.id,
+      memberStatus = $(`#${id}.member-status`).val();
+
+    // TODO: Axios updateChosenUser
+    axios
+      .post("/admin/user/edit", {
+        _id: id,
+        memberStatus: memberStatus,
+      })
+      .then((response) => {
+        console.log("response:", response);
+        const result = response.data;
+
+        if (result.data) {
+          $(".member-status").blur();
+        } else alert("User update failed!");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("User update failed!");
+      });
+  });
+});
 
 ===== C:\Users\user\desktop\burak\src\schema\Member.model.ts =====
 import mongoose, { Schema } from "mongoose";
@@ -2383,24 +2876,30 @@ export default mongoose.model("Product", productSchema);
                 <th scope="col">Status</th>
               </tr>
             </thead>
-            <!--  LOOP PRODUCTS: START  -->
-            <tbody style="background: white">
-              <td>1</td>
-              <td>Steak</td>
-              <td>Dish</td>
-              <td>NORMAL</td>
-              <td>11</td>
-              <td>100</td>
-              <td>
-                <select class="spec-select new-product-status">
-                  <option value="PAUSE" selected>PAUSE</option>
-                  <option value="PROCESS">PROCESS</option>
-                  <option value="DELETE">DELETE</option>
-                </select>
-              </td>
-            </tbody>
-            <!--  LOOP PRODUCTS: END  -->
-          </table>
+            <% products.map(function(value, key) { %>
+<tbody style="background: white">
+  <td><%= key + 1 %></td>
+  <td><%= value.productName %></td>
+  <td><%= value.productCollection %></td>
+  <td>
+    <%= value.productCollection === 'DRINK' ? value.productVolume :
+    value.productSize %>
+  </td>
+  <td><%= value.productPrice %></td>
+  <td><%= value.productLeftCount %></td>
+  <td>
+    <select
+      class="spec-select new-product-status"
+      id="<%= value._id %>"
+    >
+      <option value="PAUSE" <%= value.productStatus === 'PAUSE'? 'selected': ' '%> >PAUSE</option>
+                  <option value="PROCESS"<%= value.productStatus === 'PROCESS'? 'selected': ' '%> >PROCESS</option>
+                  <option value="DELETE"<%= value.productStatus === 'DELETE'? 'selected': ' '%> >DELETE</option>
+    </select>
+  </td>
+</tbody>
+<% }) %>
+    </table>
           <div
             class="long-input"
             style="align-items: flex-end; margin-bottom: 25px"
@@ -2411,6 +2910,7 @@ export default mongoose.model("Product", productSchema);
           </div>
         </div>
         <form
+          onsubmit="return validateForm()"
           action="/admin/product/create"
           method="POST"
           class="dish-container"
@@ -2505,6 +3005,9 @@ export default mongoose.model("Product", productSchema);
                   name="productImages"
                   class="image-one"
                   required
+                  onchange="previewFileHandler(this, 1)"
+
+                
                 />
               </div>
               <div class="upload-img-box">
@@ -2514,6 +3017,8 @@ export default mongoose.model("Product", productSchema);
                   id="file"
                   name="productImages"
                   class="image-two"
+                  onchange="previewFileHandler(this, 2)"
+
                 />
               </div>
               <div class="upload-img-box">
@@ -2523,6 +3028,8 @@ export default mongoose.model("Product", productSchema);
                   id="file"
                   name="productImages"
                   class="image-three"
+                  onchange="previewFileHandler(this, 3)"
+
                 />
               </div>
               <div class="upload-img-box">
@@ -2532,6 +3039,8 @@ export default mongoose.model("Product", productSchema);
                   id="file"
                   name="productImages"
                   class="image-four"
+                  onchange="previewFileHandler(this, 4)"
+
                 />
               </div>
               <div class="upload-img-box">
@@ -2541,6 +3050,8 @@ export default mongoose.model("Product", productSchema);
                   id="file"
                   name="productImages"
                   class="image-five"
+                  onchange="previewFileHandler(this, 5)"
+
                 />
               </div>
               <input name="restaurantIid" class="restaurant-id" hidden />
@@ -2741,20 +3252,20 @@ export default mongoose.model("Product", productSchema);
                 <th scope="col">Status</th>
               </tr>
             </thead>
-            <!--  LOOP PRODUCTS: START  -->
-            <tbody style="background: white">
-              <td>1</td>
-              <td>David</td>
-              <td>821024697878</td>
-              <td style="width: 13%">
-                <select class="spec-select member-status">
-                  <option value="ACTIVE" selected>ACTIVE</option>
-                  <option value="BLOCK">BLOCK</option>
-                  <option value="DELETE">DELETE</option>
-                </select>
-              </td>
-            </tbody>
-            <!--  LOOP PRODUCTS: END  -->
+<% users.map(function(value, index) { %>
+<tbody style="background: white">
+  <td><%= index+1 %></td>
+  <td><%= value.memberNick %></td>
+  <td><%= value.memberPhone %></td>
+  <td style="width: 13%">
+    <select class="spec-select member-status" id="<%= value._id%>">
+      <option value="ACTIVE" <%= value.memberStatus === 'ACTIVE' ? 'selected' : '' %>>ACTIVE</option>
+      <option value="BLOCK" <%= value.memberStatus === 'BLOCK' ? 'selected' : '' %>>BLOCK</option>
+      <option value="DELETE" <%= value.memberStatus === 'DELETE' ? 'selected' : '' %>>DELETE</option>
+    </select>
+  </td>
+</tbody>
+<% }) %>
           </table>
         </div>
       </div>
