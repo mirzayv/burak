@@ -232,22 +232,43 @@
 # Masalan:
 # countOccurrences({"model": "A", "s": {"model": "B"}}, "model") return 2
 
-def countOccurrences(obj: dict, key: str) -> int:
-    count = 0
+# def countOccurrences(obj: dict, key: str) -> int:
+#     count = 0
 
-    for k, v in obj.items():
-        if k == key:
-            count += 1
+#     for k, v in obj.items():
+#         if k == key:
+#             count += 1
 
-        if isinstance(v, dict):
-            count += countOccurrences(v, key)
+#         if isinstance(v, dict):
+#             count += countOccurrences(v, key)
 
-    return count
+#     return count
 
 
-print(
-    countOccurrences(
-        {"model": "A", "s": {"model": "B"}},
-        "model"
-    )
-)
+# print(
+#     countOccurrences(
+#         {"model": "A", "s": {"model": "B"}},
+#         "model"
+#     )
+# )
+# TASK Y
+
+# Masalani izohi
+# Ikkala arrayda ham ishtirok etgan bir xil qiymatlarni qaytarsin.
+
+# Masalan:
+# findIntersection([1, 2, 3], [3, 2, 0]) return [2, 3]
+
+# def findIntersection(arr1, arr2):
+
+def findIntersection(arr1, arr2):
+    result = []
+
+    for item in arr1:
+        if item in arr2:
+            result.append(item)
+
+    return result
+
+
+print(findIntersection([1, 2, 3], [3, 2, 0]))
