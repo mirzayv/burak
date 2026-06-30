@@ -261,14 +261,34 @@
 
 # def findIntersection(arr1, arr2):
 
-def findIntersection(arr1, arr2):
-    result = []
+# def findIntersection(arr1, arr2):
+#    result = []
 
-    for item in arr1:
-        if item in arr2:
-            result.append(item)
+#   for item in arr1:
+#      if item in arr2:
+#       result.append(item)
 
-    return result
+# return result
 
 
-print(findIntersection([1, 2, 3], [3, 2, 0]))
+# print(findIntersection([1, 2, 3], [3, 2, 0]))
+
+# TASK Z
+
+# Masalani izohi
+# Array tarkibidagi juft sonlar yig'indisini hisoblab qaytarsin.
+
+# Masalan:
+# sumEvens([1, 2, 3]) return 2
+
+def sumEvens(arr):
+    total = 0
+
+    for num in arr:
+        if num % 2 == 0:
+            total += num
+
+    return total
+
+
+print(sumEvens([1, 2, 3]))
