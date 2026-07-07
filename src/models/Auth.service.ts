@@ -10,6 +10,8 @@ class AuthService {
     this.secretToken = process.env.SECRET_TOKEN as string;
   }
 
+  // Member malumotini tokenga ogiryapti
+
   public async createToken(payload: Member) {
     return new Promise((resolve, reject) => {
       const duration = `${AUTH_TIMER}h`;
@@ -30,6 +32,7 @@ class AuthService {
     });
   }
 
+  // Tokenimiznmi olib ichida yashirilgan memberimizni olib beryapri
   public async checkAuth(token: string): Promise<Member> {
     const result: Member = (await jwt.verify(
       token,

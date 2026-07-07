@@ -40,8 +40,8 @@ class MemberService {
         {
           memberNick: input.memberNick,
           memberStatus: { $ne: MemberStatus.DELETE },
-        },
-        { memberNick: 1, memberPassword: 1, memberStatus: 1 },
+        }, // FILTER
+        { memberNick: 1, memberPassword: 1, memberStatus: 1 }, //PROJECTION
       )
       .exec();
     if (!member) throw new Errors(HttpCode.NOT_FOUND, Message.NO_MEMBER_NICK);
@@ -71,6 +71,21 @@ class MemberService {
 
     return result;
   }
+
+  public async updateMember(
+    member: Member,
+    input: MemberUpdateInput,
+  ): Promise<Member> {
+    const memberId = shapeIntoMongooseObjectId(member._id);
+    const result = await this.memberModel
+      .findOneAndUpdate({ _id: memberId }, input, { new: true })
+      .exec();
+
+    if (!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.UPDATE_FAILED);
+
+    return result;
+  }
+
   /** SSR */
 
   public async processSignup(input: MemberInput): Promise<Member> {

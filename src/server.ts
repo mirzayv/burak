@@ -20,7 +20,7 @@ import app from "./app";
   })
   .catch((err) => console.log("ERROR on connection MongoDB", err)); */
 
-// TCP(doimiy connection)
+// TCP1(doimiy connection)
 mongoose
   .connect(process.env.MONGO_URL as string, {})
   .then((data) => {
