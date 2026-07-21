@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 import path from "path";
 import router from "./router";
@@ -17,12 +18,18 @@ const store = new MongoDBStore({
   collection: "sessions",
 });
 
-/** 1—ENTRANCE **/
+/** 1-ENTRANCE **/
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static("./uploads"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(
+  cors({
+    credentials: true,
+    origin: true,
+  }),
+);
 app.use(cookieParser());
 app.use(morgan(MORGAN_FORMAT));
 
